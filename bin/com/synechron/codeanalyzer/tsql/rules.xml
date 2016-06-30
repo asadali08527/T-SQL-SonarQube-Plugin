@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rulesets>
+    <ruleset id="DESIGN">
+        <rules>com.synechron.codeanalyzer.tsql.rules.SR0001</rules>
+         <rules>com.synechron.codeanalyzer.tsql.rules.SR0008</rules>
+         <rules>com.synechron.codeanalyzer.tsql.rules.SR0009</rules>
+         <rules>com.synechron.codeanalyzer.tsql.rules.SR0010</rules>
+         <rules>com.synechron.codeanalyzer.tsql.rules.SR0054</rules>
+         <rules>com.synechron.codeanalyzer.tsql.rules.SR0055</rules>
+         <rules>com.synechron.codeanalyzer.tsql.rules.SR0056</rules>
+         <rules>com.synechron.codeanalyzer.tsql.rules.SR0057</rules>
+         <rules>com.synechron.codeanalyzer.tsql.rules.SR0058</rules>
+    </ruleset>
+     <ruleset id="NAMING">
+       <rules>com.synechron.codeanalyzer.tsql.rules.SR0011</rules>
+         <rules>com.synechron.codeanalyzer.tsql.rules.SR0016</rules>
+    </ruleset>
+     <ruleset id="PERFORMANCE">
+         <rules>com.synechron.codeanalyzer.tsql.rules.SR0005</rules>
+         <rules>com.synechron.codeanalyzer.tsql.rules.SR0006</rules>
+         <rules>com.synechron.codeanalyzer.tsql.rules.SR0015</rules>
+         <rules>com.synechron.codeanalyzer.tsql.rules.SR0051</rules>
+         <rules>com.synechron.codeanalyzer.tsql.rules.SR0052</rules>
+         <rules>com.synechron.codeanalyzer.tsql.rules.SR0053</rules>
+         <rules>com.synechron.codeanalyzer.tsql.rules.SR0059</rules>
+    </ruleset>
+</rulesets>

@@ -1,0 +1,44 @@
+def dirLocation
+def ruleset
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.6
+version = '1.0'
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Code Analyzer',
+                   'Implementation-Version': version,
+                   'Main-Class': 'com.synechron.codeanalyzer.CodeAnalyzer'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.creativewidgetworks', name: 'goldengine', version: '5.0.3'    
+}
+
+task ask (dependsOn: 'classes') << {
+    def console = System.console()
+    if (console) {
+        dirLocation = console.readLine('> Please enter the directory location of files: ')
+        ruleset = console.readLine('> Please enter the ruleset to be applied: ')    	
+		
+    } else {
+        logger.error "Cannot get console."
+    }
+}
+
+
+task  (runSimple, type: JavaExec, dependsOn: 'ask') {
+	
+    main = 'com.synechron.codeanalyzer.CodeAnalyzer'
+    classpath = sourceSets.test.runtimeClasspath
+    args = ['C:/Users/Asadali.A/Desktop/SQL', 'ALL'].toList()    		
+    
+}
+
+defaultTasks 'runSimple'
