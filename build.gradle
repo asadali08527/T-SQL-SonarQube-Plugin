@@ -9,7 +9,7 @@ jar {
     manifest {
         attributes 'Implementation-Title': 'Code Analyzer',
                    'Implementation-Version': version,
-                   'Main-Class': 'com.synechron.codeanalyzer.CodeAnalyzer'
+                   'Main-Class': 'com.synechron.sonar.tsql.TSQLPlugin'
     }
 }
 
@@ -18,7 +18,8 @@ repositories {
 }
 
 dependencies {
-    compile group: 'com.creativewidgetworks', name: 'goldengine', version: '5.0.3'    
+    compile group: 'com.creativewidgetworks', name: 'goldengine', version: '5.0.3'
+    compile group: 'org.codehaus.sonar-plugins.java', name: 'sonar-java-plugin', version: '2.2.1'    
 }
 
 task ask (dependsOn: 'classes') << {
@@ -35,7 +36,7 @@ task ask (dependsOn: 'classes') << {
 
 task  (runSimple, type: JavaExec, dependsOn: 'ask') {
 	
-    main = 'com.synechron.codeanalyzer.CodeAnalyzer'
+    main = 'com.synechron.sonar.tsql.TSQLPlugin'
     classpath = sourceSets.test.runtimeClasspath
     args = ['C:/Users/Asadali.A/Desktop/SQL', 'ALL'].toList()    		
     

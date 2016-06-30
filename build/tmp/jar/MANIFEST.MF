@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
 Implementation-Title: Code Analyzer
 Implementation-Version: 1.0
-Main-Class: com.synechron.codeanalyzer.CodeAnalyzer
+Main-Class: com.synechron.sonar.tsql.TSQLPlugin
 
